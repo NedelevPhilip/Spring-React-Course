@@ -1,0 +1,17 @@
+Column:
+-all
+-add(title)
+-delete(id)
+-rename(id, title)
+
+Card:
+-add(title, column_id)
+-delete(id)
+-descr(desct, id)
+-copy(id)
+-move(card_id, column_id)
+
+ChecklistItem:
+-add(text, card_id)
+-delete(id)
+-check(id)

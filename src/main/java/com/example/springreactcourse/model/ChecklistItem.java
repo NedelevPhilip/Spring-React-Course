@@ -1,5 +1,7 @@
 package com.example.springreactcourse.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,9 +18,22 @@ public class ChecklistItem {
 
     @ManyToOne
     @JoinColumn(name = "card_id")
+    @JsonIgnoreProperties({"checklistItems"})
     private Card card;
 
     public ChecklistItem(){}
+
+    public ChecklistItem(String text, Card card) {
+        this.text = text;
+        this.card = card;
+        this.checked = false;
+    }
+
+    public ChecklistItem(String text, Card card, boolean checked) {
+        this.text = text;
+        this.card = card;
+        this.checked = checked;
+    }
 
     public int getId() {
         return id;

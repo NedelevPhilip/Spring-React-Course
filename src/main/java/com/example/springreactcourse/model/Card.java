@@ -1,5 +1,7 @@
 package com.example.springreactcourse.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +24,22 @@ public class Card {
 
     @ManyToOne
     @JoinColumn(name = "column_id")
+    @JsonIgnoreProperties({"cards"})
     private Column column;
 
     public Card(){}
+
+    public Card(String title, Column column) {
+        this.title = title;
+        this.column = column;
+    }
+
+    public Card(Card originCard){
+        this.title = originCard.getTitle();
+        this.description = originCard.getDescription();
+        this.column = originCard.getColumn();
+        for (ChecklistItem item : originCard.getChecklistItems()) this.checklistItems.add(new ChecklistItem(item.getText(), this, item.isChecked()));
+     }
 
     public int getId() {
         return id;
