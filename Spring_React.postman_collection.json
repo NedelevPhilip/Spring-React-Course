@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "42c10865-4103-4c71-92ff-e6f696a06067",
+		"name": "Spring_React",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Column",
+			"item": [
+				{
+					"name": "Column Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/column/add?title=Column 1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"column",
+								"add"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Column 1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Column Get All",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/column/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"column",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Column Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/column/delete?id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"column",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Column Rename",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/column/rename?id=3&title=Rename Column",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"column",
+								"rename"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								},
+								{
+									"key": "title",
+									"value": "Rename Column"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Card",
+			"item": [
+				{
+					"name": "Card Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/card/add?title=Card 1&columnId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"add"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Card 1"
+								},
+								{
+									"key": "columnId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Card Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/card/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Card Description",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "vfv",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/card/descr?descr=lololo&id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"descr"
+							],
+							"query": [
+								{
+									"key": "descr",
+									"value": "lololo"
+								},
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Card Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "vfv",
+								"type": "text",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/card/copy?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"copy"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Card Move",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "vfv",
+								"type": "text",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/card/move?cardId=1&columnId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"card",
+								"move"
+							],
+							"query": [
+								{
+									"key": "column",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "cardId",
+									"value": "1"
+								},
+								{
+									"key": "columnId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Checklist",
+			"item": [
+				{
+					"name": "Checklist Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/checklist/add?text=check1&cardId=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"checklist",
+								"add"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "check1"
+								},
+								{
+									"key": "cardId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checklist Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/checklist/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"checklist",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checklist Check",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "vfv",
+								"type": "text",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/checklist/check?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"checklist",
+								"check"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
